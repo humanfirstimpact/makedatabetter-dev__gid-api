@@ -46,27 +46,35 @@ element.
       Polymer({
         is:'gid-api',
         properties:{
-        	apiUrl:  String,
-        	apiParams: String,
-        	attrName : String,
-        	apiHeader:  String,
+        	apiUrl:  {
+       			type:String,
+       			notify:true
+        	},
+        	apiParams: {
+       			type:String,
+       			notify:true
+        	},
+        	attrName :{
+       			type:String,
+       			notify:true
+        	},
+        	apiHeader:  {
+       			type:String,
+       			notify:true
+        	},
         	apiTimeout:{
         		type: Number,
     	        notify: true,
     	        value: 0
         	},
-        	columns :{
-    	        type: Array,
-    	        notify: true
-            },
-        	response: {
-        	        type: Object,
-        	        notify: true
+   	     	response: {
+	   	        type: Object,
+	   	        notify: true
            },
            auto:{
-       		 type:Boolean,
-       	     notify: true,
-       	     value:true
+	       		 type:Boolean,
+	       	     notify: true,
+	       	     value:true
        		},
        		httpMethod:{
        			type:String,
