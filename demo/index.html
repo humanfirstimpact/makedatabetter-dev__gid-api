@@ -18,7 +18,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </style>
 </head>
 <body unresolved>
-  <h1>Video Feed</h1>
+  <h1>Employee list</h1>
   <div class="horizontal-section-container">
     <template is="dom-bind" id="app">
       <gid-api auto=false
@@ -27,7 +27,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <template is="dom-repeat" items="[[ajaxResponse.items]]">
           <div class="horizontal-section">
-            <p>Name:&nbsp; {{item.name}}</p>
+            <p>{{item.name}}</p>
           </div>
         </template>
 
