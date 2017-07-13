@@ -11,6 +11,7 @@ The `gid-api` element is a wrapper on iron ajax used for handling rest calls.
     <gid-api auto=false
 			http-method="get" api-url="../assets/test.json" response={{ajaxResponse}}
 			api-timeout= 0  api-params='{"token": "AIzaSyAuecFZ9xJXbGDkQYWBmYrtzOGJD-iDIgI"}'>
+    </gid-api>
 
 With `auto` set to `true`, the element performs a request whenever
 its `url`, `params` or `body` properties are changed. Automatically generated
@@ -86,19 +87,9 @@ element.
        			notify:true
        		}
         },
-        created:function(){
-        },
         _processParams: function(apiParams){
         	return JSON.parse(apiParams);
-        },
-        _getUrl: function(apiUrl){
-		   var params = this._processParams(this.apiParams);
-		   apiUrl = apiUrl + '?';
-		   for (var key in params){
-			   apiUrl= apiUrl + key + '=' + params[key];
-			}
-		   return apiUrl;
-       }
+        }
       });
     })();
   </script>
