@@ -29,7 +29,8 @@ element.
   <template>
          <iron-ajax
             auto = {{auto}}
-		    url='{{apiUrl}}'
+		    url = '{{apiUrl}}'
+		    body = "{{requestBody}}"
 		    params ='{{_processParams(apiParams)}}'
 		    content-type="application/json"
             method="{{httpMethod}}"
@@ -85,7 +86,12 @@ element.
        		error:{
        			type:String,
        			notify:true
+       		},
+       		requestBody: {
+       			type: Object,
+	   	        notify: true
        		}
+       		
         },
         _processParams: function(apiParams){
         	return JSON.parse(apiParams);
