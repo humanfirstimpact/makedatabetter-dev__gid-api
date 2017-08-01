@@ -7,12 +7,13 @@ var apis = {
 		"tables": "/concepts/{concept}/applications/{application}/databases/{database}/schemas/{schema}/tables",
 		"columns": "/concepts/{concept}/applications/{application}/databases/{database}/schemas/{schema}/tables/{table}/columns",
 		"coverage": "/concepts/{concept}/coverage",
-		"tableColumns": "/tables/{table}/columns",
-		"tableData": "/tables/{table}/rows",
-		"recommendedConcepts": "/columns/{column}/recommendedConcepts",
-		"verifyConcepts": "/columns/{column}/recommendedConcepts/{concept}/verify?hv=N",
+		"table-columns": "/tables/{table}/columns",
+		"table-data": "/tables/{table}/rows",
+		"recommended-concepts": "/columns/{column}/recommendedConcepts",
+		"verify-concepts": "/columns/{column}/recommendedConcepts/{concept}/verify",
 		"samples": "/columns/{column}/samples",
 		"synonyms": "/columns/{column}/synonyms",
 		"patterns": "/columns/{column}/patterns",
-		"listConcepts": "/concepts/{user}/concepts"
+		"list-concepts": "/concepts/{user}/concepts",
+		"concept-details" : "/concepts/{concept}"
 }
