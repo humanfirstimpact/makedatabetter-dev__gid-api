@@ -14,7 +14,7 @@ var apis = {
 		"samples": "/columns/{column}/samples",
 		"synonyms": "/columns/{column}/synonyms",
 		"patterns": "/columns/{column}/patterns",
-		"list-concepts": "/concepts/{user}/concepts",
+		"list-concepts": "/concepts",
 		"concept-details" : "/concepts/{concept}",
 		"curate-concept" : "/concepts/{concept}/curate"
 }
