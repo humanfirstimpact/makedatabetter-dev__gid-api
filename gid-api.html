@@ -11,7 +11,7 @@
 The `gid-api` element is a wrapper on iron ajax used for handling rest calls.
 
     <gid-api auto=false
-			http-method="get" api-url="../assets/json/test.json" response={{ajaxResponse}}
+			method="get" api-url="../assets/json/test.json" response={{ajaxResponse}}
 			api-timeout= 0  api-params='{"token": "AIzaSyAuecFZ9xJXbGDkQYWBmYrtzOGJD-iDIgI"}'>
     </gid-api>
 
@@ -35,7 +35,7 @@ element.
 		    body = "{{requestBody}}"
 		    params ='{{_processParams(apiParams)}}'
 		    content-type="application/json"
-            method="{{httpMethod}}"
+            method="{{method}}"
 		    handle-as="json"
 		    last-response="{{response}}"
 		    last-error="{{error}}"
@@ -80,7 +80,7 @@ element.
 	       	     notify: true,
 	       	     value:true
        		},
-       		httpMethod:{
+       		method:{
        			type:String,
        			notify:true,
        			value:"GET"
