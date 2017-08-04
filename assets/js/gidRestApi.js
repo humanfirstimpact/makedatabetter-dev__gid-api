@@ -16,5 +16,6 @@ var apis = {
 		"patterns": "/columns/{column}/patterns",
 		"list-concepts": "/concepts",
 		"concept-details" : "/concepts/{concept}",
-		"curate-concept" : "/concepts/{concept}/curate"
+		"curate-concept" : "/concepts/{concept}/curate",
+		"create-concept" : "/concepts"
 }
