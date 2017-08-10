@@ -12,7 +12,7 @@ The `gid-api` element is a wrapper on iron ajax used for handling rest calls.
 
     <gid-api auto=false
 			method="get" api-url="../assets/json/test.json" response={{ajaxResponse}}
-			api-timeout= 0  api-params='{"token": "AIzaSyAuecFZ9xJXbGDkQYWBmYrtzOGJD-iDIgI"}'>
+			api-timeout= 0>
     </gid-api>
 
 With `auto` set to `true`, the element performs a request whenever
@@ -37,6 +37,7 @@ element.
 		    content-type="application/json"
             method="{{method}}"
 		    handle-as="json"
+		    headers = '{{_fetchHeaders()}}'
 		    last-response="{{response}}"
 		    last-error="{{error}}"
 		    debounce-duration="300"
@@ -116,6 +117,9 @@ element.
 	                    that.path = apis[that.entity.toLowerCase()];
         	}
         	 
+        },
+        _fetchHeaders: function(){
+        	return authToken;
         }
       });
     })();
