@@ -133,7 +133,7 @@ element.
         },
         apiTokenReceived: function(){
         	if(this.apiToken){
-        		this.apiHeader["Authorization"] = '"Bearer:' + this.apiToken + '"';
+        		this.apiHeader["Authorization"] = '"Bearer ' + this.apiToken + '"';
         	}
         }
       });
