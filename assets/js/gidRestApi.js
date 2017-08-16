@@ -7,7 +7,7 @@ var apis = {
 		"tables": "/concepts/{concept}/applications/{application}/databases/{database}/schemas/{schema}/tables",
 		"columns": "/concepts/{concept}/applications/{application}/databases/{database}/schemas/{schema}/tables/{table}/columns",
 		"coverage": "/concepts/{concept}/coverage",
-		"get-samples": "/columns/{column}/samples",
+		"get-samples": "/samples",
 		"recommended-concepts": "/columns/{column}/recommendedconcepts",
 		"verify-concept": "/columns/{column}/recommendedconcepts/{concept}/verify",
 		"list-concepts": "/concepts",
@@ -17,5 +17,3 @@ var apis = {
 		"edit-concept": "/concepts/{concept}",
 		"remove-concept": "/concepts/{concept}"
 	};
-
-var authToken = '';

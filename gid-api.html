@@ -37,7 +37,7 @@ element.
 		    content-type="application/json"
             method="{{method}}"
 		    handle-as="json"
-		    headers = '{{_fetchHeaders()}}'
+		    headers = '{{apiHeader}}'
 		    last-response="{{response}}"
 		    last-error="{{error}}"
 		    debounce-duration="300"
@@ -113,13 +113,17 @@ element.
         },
         entityReceived: function(){
         	var that = this;
+        	var apiList = {};
+        	if(localStorage.getItem('apis')){
+        		apiList = localStorage.getItem('apis');
+        	}
+        	else{
+        		apiList =  apis;
+        	}
         	if(that.entity){
-	                    that.path = apis[that.entity.toLowerCase()];
+	                    that.path = apiList[that.entity.toLowerCase()];
         	}
         	 
-        },
-        _fetchHeaders: function(){
-        	return authToken;
         }
       });
     })();
