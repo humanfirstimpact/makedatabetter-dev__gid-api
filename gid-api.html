@@ -64,8 +64,9 @@ element.
        			notify:true
         	},
         	apiHeader:  {
-       			type:String,
-       			notify:true
+       			type:Object,
+       			notify:true,
+       			value: {}
         	},
         	apiTimeout:{
         		type: Number,
@@ -103,7 +104,12 @@ element.
        			type:String,
        			notify:true,
        			value: ''
-       			
+       		},
+       		apiToken: {
+       			type:String,
+       			notify:true,
+       			value: '',
+       			observer: 'apiTokenReceived'
        		}
        		
        		
@@ -124,6 +130,11 @@ element.
 	                    that.path = apiList[that.entity.toLowerCase()];
         	}
         	 
+        },
+        apiTokenReceived: function(){
+        	if(this.apiToken){
+        		this.apiHeader["Authorization"] = '"Bearer:' + this.apiToken + '"';
+        	}
         }
       });
     })();
