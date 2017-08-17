@@ -125,8 +125,8 @@ element.
         entityReceived: function(){
         	var that = this;
         	var apiList = {};
-        	if(localStorage.getItem('apis')){
-        		apiList = localStorage.getItem('apis');
+        	if(localStorage.hasOwnProperty('api-path')){
+        		apiList = JSON.parse(localStorage.getItem('api-path'));
         	}
         	else{
         		apiList =  apis;
