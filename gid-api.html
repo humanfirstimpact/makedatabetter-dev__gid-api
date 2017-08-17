@@ -34,7 +34,7 @@ element.
 		    url = '{{apiUrl}}'
 		    body = "{{requestBody}}"
 		    params ='{{_processParams(apiParams)}}'
-		    content-type="application/json"
+		    content-type="{{apiContentType}}"
             method="{{method}}"
 		    handle-as="json"
 		    headers = '{{apiHeader}}'
@@ -59,6 +59,11 @@ element.
        			type:String,
        			notify:true
         	},
+        	apiContentType: {
+       			type: String,
+       			notify: true,
+       			value: 'application/json'
+       		},
         	attrName :{
        			type:String,
        			notify:true
