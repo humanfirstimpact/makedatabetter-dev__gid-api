@@ -16,5 +16,5 @@ var apis = {
 		"create-concept": "/concepts",
 		"edit-concept": "/concepts/{concept}",
 		"remove-concept": "/concepts/{concept}",
-		"auth": "/api/security/api-token"
+		"auth": "/api/security/api-token-v1"
 	};
