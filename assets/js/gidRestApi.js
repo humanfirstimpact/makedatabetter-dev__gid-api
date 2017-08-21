@@ -1,4 +1,4 @@
-var apis = {
+var api-path = {
 		"lobs": "/lobs",
 		"concepts": "/lobs/{lob}/concepts",
 		"applications": "/concepts/{concept}/applications",
