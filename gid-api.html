@@ -94,7 +94,8 @@ element.
        		},
        		error:{
        			type:String,
-       			notify:true
+       			notify:true,
+       			observer: 'errorReceived'
        		},
        		requestBody: {
        			type: Object,
@@ -139,6 +140,13 @@ element.
         apiTokenReceived: function(){
         	if(this.apiToken){
         		this.apiHeader["Authorization"] = 'Bearer ' + this.apiToken;
+        	}
+        },
+        errorReceived: function(newvalue, oldvalue){
+        	if(newvalue !== null){
+        		if(newvalue.response.errorCode === "40101"){
+        			localStorage.clear();
+        		}
         	}
         }
       });
