@@ -148,7 +148,7 @@ element.
         	}
         },
         errorReceived: function(newvalue, oldvalue){
-        	if(newvalue !== null && response !== null){
+        	if(newvalue !== null && newvalue.response !== null){
         		if(newvalue.response.errorCode === "40101"){
         			localStorage.clear();
         		}
