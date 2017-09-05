@@ -139,10 +139,8 @@ element.
         		apiList =  apiPath;
         	}
         	if(that.entity){
-//         				var res =  that.entity.split(".");
         				var temp = that.entity.toLowerCase() + '.' + that.pathKey;
 	                    that.path = _.get(apiList, temp);
-	                    console.log(that.path);
         	}
         	 
         },
