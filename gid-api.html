@@ -168,6 +168,8 @@ element.
         	if(newvalue !== null && newvalue.response !== null){
         		if(newvalue.response.errorCode === "40101"){
         			localStorage.clear();
+					var event = new CustomEvent("logout-event", {"detail": "LOGOUT"});
+					document.dispatchEvent(event);
         		}
         	}
         }
