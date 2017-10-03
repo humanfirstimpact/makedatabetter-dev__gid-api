@@ -68,5 +68,8 @@ var apiPath = {
 		  },
 		  "auth": {
 			  "default": "/api/security/api-token-v1"
+		  },
+		  "faceted-columns": {
+			  "default": "/columns"
 		  }
 		};
