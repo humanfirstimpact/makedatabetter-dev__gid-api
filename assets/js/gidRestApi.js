@@ -81,13 +81,19 @@ var apiPath = {
     "list-connections": {
         "default": "/databases"
     },
-    "flag-concept": {
-        "default": "/requests"
+    "add-referral": {
+        "default": "/referrals"
     },
-    "list-requests": {
-        "default": "/requests"
+    "remove-referral": {
+        "default": "/referrals/{referral}"
     },
-    "review-concept": {
-        "default": "/requests/{request}"
+    "list-referrals": {
+        "default": "/referrals"
+    },
+    "review-referral": {
+        "default": "/referrals/{referral}"
+    },
+    "concept-referral-dispositions": {
+        "default": "/referrals/dispositions"
     }
 };
