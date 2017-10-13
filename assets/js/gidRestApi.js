@@ -82,11 +82,21 @@ var apiPath = {
         "default": "/databases"
     },
     "referrals": {
-        "flag": "/referrals",
-        "unflag": "/referrals/{referral}",
-        "list": "/referrals",
-        "reject": "/referrals/{referral}",
-        "accept": "/referrals/{referral}"
+        "flag": {
+        	"default": "/referrals"
+        },
+        "unflag": {
+        	"default":  "/referrals/{referral}"
+        },
+        "list": {
+        	"default":  "/referrals"
+        },
+        "reject":  {
+        	"default": "/referrals/{referral}"
+        },
+        "accept":  {
+        	"default": "/referrals/{referral}"
+        }
     },
     "concept-referral-dispositions": {
         "default": "/referrals/dispositions"
