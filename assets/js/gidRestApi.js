@@ -98,7 +98,7 @@ var apiPath = {
         	"default": "/referrals/{referral}"
         }
     },
-    "concept-referral-dispositions": {
+    "dispositions": {
         "default": "/referrals/dispositions"
     }
 };
