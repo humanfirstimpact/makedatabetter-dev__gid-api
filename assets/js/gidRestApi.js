@@ -72,6 +72,9 @@ var apiPath = {
     "faceted-columns": {
         "default": "/columns"
     },
+	"clusters": {
+        "default": "/clusters"
+    },
     "database-types": {
         "default": "/databases/types"
     },
