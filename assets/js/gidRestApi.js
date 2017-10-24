@@ -78,11 +78,16 @@ var apiPath = {
     "database-types": {
         "default": "/databases/types"
     },
-    "add-connection": {
-        "default": "/databases"
-    },
-    "list-connections": {
-        "default": "/databases"
+    "connections": {
+        "add": {
+            "default": "/databases"
+        },
+        "test": {
+            "default": "/databases"
+        },
+        "list": {
+            "default": "/databases"
+        }
     },
     "referrals": {
         "flag": {
