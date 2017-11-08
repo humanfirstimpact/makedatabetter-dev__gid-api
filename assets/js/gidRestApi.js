@@ -75,6 +75,15 @@ var apiPath = {
 	"clusters": {
         "default": "/clusters"
     },
+    "search-synonyms": {
+    	"default": "/columns"
+    },
+    "search-patterns": {
+    	"default": "/patterns"
+    },
+    "search-related-domains": {
+    	"default": "/domains"
+    },
     "database-types": {
         "default": "/databases/types"
     },
